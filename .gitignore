@@ -1,0 +1,17 @@
+# Replit configuration files
+.replit
+.replit_history
+.replit_db
+.replit_agents
+.replit_cache
+
+# Node / Python / general build files (optional, but recommended)
+node_modules/
+__pycache__/
+*.pyc
+dist/
+build/
+
+# OS-specific files (optional)
+.DS_Store
+Thumbs.db

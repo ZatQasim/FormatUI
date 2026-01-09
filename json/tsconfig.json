@@ -1,0 +1,30 @@
+{
+  "include": [
+    "../formatui-env/src/**/*", 
+    "../shared/**/*", 
+    "../mdr-system/**/*",
+    "../schema-endpoint/**/*"
+  ],
+  "exclude": ["../node_modules", "../build", "../posted-assets", "**/*.test.ts"],
+  "compilerOptions": {
+    "incremental": true,
+    "tsBuildInfoFile": "../node_modules/typescript/tsbuildinfo",
+    "noEmit": true,
+    "module": "ESNext",
+    "strict": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "bundler",
+    // This tells TypeScript the project root is one level UP from this folder
+    "baseUrl": "..", 
+    "types": ["node", "vite/formatui-env"],
+    "paths": {
+      // These paths are now resolved correctly relative to baseUrl (the project root)
+      "@/*": ["formatui-env/src/*"],
+      "@schema-endpoint/*": ["schema-endpoint/*"]
+    }
+  }
+}

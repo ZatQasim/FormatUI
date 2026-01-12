@@ -97,6 +97,8 @@ export interface IStorage {
 
   getSearchHistory(discordUserId: string, limit?: number): Promise<SearchHistory[]>;
   createSearchHistory(history: InsertSearchHistory): Promise<SearchHistory>;
+  deleteSearchHistory(id: string): Promise<boolean>;
+  clearSearchHistory(discordUserId: string): Promise<boolean>;
 
   getQuestionHistory(discordUserId: string, limit?: number): Promise<QuestionHistory[]>;
   createQuestionHistory(history: InsertQuestionHistory): Promise<QuestionHistory>;
@@ -437,6 +439,16 @@ export class DatabaseStorage implements IStorage {
   async createSearchHistory(history: InsertSearchHistory): Promise<SearchHistory> {
     const result = await db.insert(searchHistory).values(history).returning();
     return result[0];
+  }
+
+  async deleteSearchHistory(id: string): Promise<boolean> {
+    const result = await db.delete(searchHistory).where(eq(searchHistory.id, id)).returning();
+    return result.length > 0;
+  }
+
+  async clearSearchHistory(discordUserId: string): Promise<boolean> {
+    const result = await db.delete(searchHistory).where(eq(searchHistory.discordUserId, discordUserId)).returning();
+    return true;
   }
 
   async getQuestionHistory(discordUserId: string, limit: number = 10): Promise<QuestionHistory[]> {

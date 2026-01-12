@@ -379,10 +379,30 @@ export async function registerRoutes(
   app.get("/api/history/search/:discordUserId", async (req, res) => {
     try {
       const { discordUserId } = req.params;
-      const history = await storage.getSearchHistory(discordUserId, 5);
+      const history = await storage.getSearchHistory(discordUserId, 50);
       res.json({ history });
     } catch (error) {
       res.status(500).json({ error: "Failed to fetch history" });
+    }
+  });
+
+  app.delete("/api/history/search/clear/:discordUserId", async (req, res) => {
+    try {
+      const { discordUserId } = req.params;
+      await storage.clearSearchHistory(discordUserId);
+      res.json({ success: true });
+    } catch (error) {
+      res.status(500).json({ error: "Failed to clear history" });
+    }
+  });
+
+  app.delete("/api/history/search/:id", async (req, res) => {
+    try {
+      const { id } = req.params;
+      await storage.deleteSearchHistory(id);
+      res.json({ success: true });
+    } catch (error) {
+      res.status(500).json({ error: "Failed to delete history item" });
     }
   });
 

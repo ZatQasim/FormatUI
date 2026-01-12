@@ -45,7 +45,7 @@ app.use((req, res, next) => {
   };
 
   res.on("finish", () => {
-    // API logs disabled for privacy
+    // API logs disabled for privacy as requested by user
   });
 
   next();

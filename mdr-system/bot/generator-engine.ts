@@ -43,10 +43,13 @@ async function fetchOnlineTemplates(type: string, topic: string): Promise<string
     
     // Fetch actual content from top 3 results for deeper synthesis
     const contentTasks = flatResults.slice(0, 3).map(r => fetchAndExtractContent(r.url));
-    const extraContents = await Promise.all(contentTasks);
+    const extraContents = await Promise.all(contentTasks).catch(e => {
+      console.error("Content extraction failed:", e);
+      return [];
+    });
     
     const structuredData = flatResults.map((r, i) => {
-      const content = extraContents[i] || r.description;
+      const content = extraContents[i] || r.description || "No content available";
       return `Source: ${r.title}\nContent: ${content.substring(0, 800)}`;
     });
     

@@ -144,13 +144,18 @@ export class DatabaseStorage implements IStorage {
   }
 
   async getQuestionCountForDay(username: string, dateString: string): Promise<number> {
-    const result = await db.select({ count: sql<number>`count(*)` })
-      .from(questionHistory)
-      .where(and(
-        eq(questionHistory.discordUserId, username),
-        sql`DATE(${questionHistory.createdAt}) = DATE(${dateString})`
-      ));
-    return Number(result[0].count);
+    try {
+      const result = await db.select({ count: sql<number>`count(*)` })
+        .from(questionHistory)
+        .where(and(
+          eq(questionHistory.discordUserId, username),
+          sql`DATE(${questionHistory.createdAt}) = DATE(${dateString})`
+        ));
+      return Number(result[0]?.count || 0);
+    } catch (e) {
+      console.error("Error getting question count:", e);
+      return 0;
+    }
   }
 
   async getTasks(discordUserId: string, guildId: string): Promise<Task[]> {

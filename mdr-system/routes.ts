@@ -195,6 +195,9 @@ export async function registerRoutes(
   app.post("/api/generate", async (req, res) => {
     try {
       const { prompt, options, userTag } = req.body;
+      if (!prompt) {
+        return res.status(400).json({ error: "Prompt is required" });
+      }
       const { autoGenerate } = await import('./bot/generator-engine');
       
       if (userTag) {

@@ -58,7 +58,7 @@ export const FormatWiki: React.FC = () => {
 
       {/* Footer */}
       <footer className="mt-8 text-center text-sm text-gray-500">
-        Made by me, ZatQasim (or Maxamed since that's my real name tbh)
+        Made by me, ZatQasim (or Mohamed since that's my real name tbh)
       </footer>
     </div>
   );

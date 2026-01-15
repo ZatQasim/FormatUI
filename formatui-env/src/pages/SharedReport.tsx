@@ -51,7 +51,7 @@ const SharedReportPage = () => {
           <div className="p-4 rounded-full bg-primary/10 mb-4 border border-primary/20">
             <Shield className="text-primary" size={48} />
           </div>
-          <h1 className="text-4xl font-heading font-bold gradient-text">FormatUI Security Report</h1>
+          <h1 className="text-4xl font-heading font-bold gradient-text">FormAT Security Report</h1>
           <p className="text-muted-foreground">Verified digital fingerprint analysis for public verification.</p>
         </div>
 

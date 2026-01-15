@@ -39,9 +39,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
     <div className="flex flex-col h-full bg-sidebar/60 backdrop-blur-xl border-r border-white/5">
       <div className="p-6 flex items-center gap-3">
         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-400 to-purple-600 flex items-center justify-center">
-          <img src="/logo.png" alt="FormatUI Logo" className="w-6 h-6" />
+          <img src="/logo.png" alt="FormAT Logo" className="w-6 h-6" />
         </div>
-        <span className="font-bold text-xl text-white">FormatUI</span>
+        <span className="font-bold text-xl text-white">FormAT</span>
       </div>
 
       <nav className="flex-1 px-4 py-6 space-y-2">

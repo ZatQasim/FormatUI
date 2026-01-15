@@ -3,12 +3,12 @@ import React from "react";
 export const FormatWiki: React.FC = () => {
   return (
     <div className="p-6 max-w-4xl mx-auto bg-gray-900 text-gray-100 shadow-lg rounded-lg">
-      <h1 className="text-3xl font-bold mb-4 text-white">FormatUI Wiki</h1>
+      <h1 className="text-3xl font-bold mb-4 text-white">FormAT Wiki</h1>
 
       <section className="mb-6">
         <h2 className="text-2xl font-semibold mb-2 text-gray-200">Overview</h2>
         <p className="text-gray-300">
-          FormatUI is a comprehensive digital assistant designed to provide powerful tools for productivity, 
+          FormAT is a comprehensive digital assistant designed to provide powerful tools for productivity, 
           organization, and security. It combines a personal generator, search capabilities, task management, 
           and advanced security features into a unified interface for streamlined use.
         </p>

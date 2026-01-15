@@ -1,8 +1,8 @@
-# FormatUI - AI Assistant Platform
+# FormAT - AI Assistant Platform
 
 ## Overview
 
-FormatUI is a full-stack AI-powered productivity platform combining a Discord bot with a web dashboard. The application provides real-time translation, AI chat assistance, content generation, task management, web search with AI summarization, and gamified learning features (quizzes, habits, focus sessions). The platform uses a freemium model with Stripe integration for Pro subscriptions.
+FormAT is a full-stack AI-powered productivity platform combining a Discord bot with a web dashboard. The application provides real-time translation, AI chat assistance, content generation, task management, web search with AI summarization, and gamified learning features (quizzes, habits, focus sessions). The platform uses a freemium model with Stripe integration for Pro subscriptions.
 
 ## User Preferences
 

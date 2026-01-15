@@ -1,6 +1,6 @@
-FormatUI
+FormAT
 
-FormatUI is a powerful all-in-one application combining:
+FormAT is a powerful all-in-one application combining:
 
 AI Assistant – intelligent help and automation
 
@@ -13,7 +13,7 @@ Task Manager – manage system processes and tasks
 Experiments Platform – run and test experimental features
 
 
-FormatUI is designed to keep systems running smoothly while providing advanced tools for productivity and experimentation.
+FormAT is designed to keep systems running smoothly while providing advanced tools for productivity and experimentation.
 
 
 ---
@@ -42,13 +42,13 @@ Installation
 
 
 
-git clone https://github.com/YourUsername/FormatUI.git
+git clone https://github.com/YourUsername/FormAT.git
 
 2. Navigate to the project folder:
 
 
 
-cd FormatUI
+cd FormAT
 
 3. Run the main application:
 
@@ -56,7 +56,7 @@ cd FormatUI
 
 node main.js
 
-> Node.js is required to run FormatUI.
+> Node.js is required to run FormAT.
 
 
 

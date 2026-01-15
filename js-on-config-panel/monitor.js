@@ -57,7 +57,7 @@ async function sendAlert(title, message, color) {
     }
 
     const payload = {
-        username: "FormatUI Guard",
+        username: "FormAT Guard",
         embeds: [{ title, description: `\`\`\`\n${message}\n\`\`\``, color, timestamp: new Date() }]
     };
     
@@ -75,7 +75,7 @@ async function sendStatusReport() {
     appLogs = []; 
 
     const payload = {
-        username: "FormatUI Guard",
+        username: "FormAT Guard",
         embeds: [{
             title: "🛡️ 24/7 Guard: Active",
             color: 3066993,
@@ -98,7 +98,7 @@ async function sendStatusReport() {
 if (!WEBHOOK_URL) {
     originalLog("❌ FAILED TO START: Please add WEBHOOK_URL to your Secrets.");
 } else {
-    originalLog("FormatUI systems are online and running"); 
+    originalLog("FormAT systems are online and running"); 
     startInternalPinger();
     setInterval(selfHeal, 60000); 
     setInterval(sendStatusReport, 600000); 

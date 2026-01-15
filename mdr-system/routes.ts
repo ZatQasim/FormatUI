@@ -10,7 +10,7 @@ import { performWebSearch } from "./bot/search-engine";
 import Stripe from "stripe";
 import bodyParser from "body-parser";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_mock', {
   apiVersion: "2023-10-16" as any,
 });
 
@@ -60,7 +60,7 @@ export async function registerRoutes(
             price_data: {
               currency: "usd",
               product_data: {
-                name: "FormatUI Pro",
+                name: "FormAT Pro",
                 description: `Subscription for ${userTag}`,
               },
               unit_amount: 500,
@@ -176,8 +176,8 @@ export async function registerRoutes(
       const speakeasy = require("speakeasy");
       const qrcode = require("qrcode");
       const secret = speakeasy.generateSecret({ 
-        name: "FormatUI",
-        issuer: "FormatUI Platform"
+        name: "FormAT",
+        issuer: "FormAT Platform"
       });
       const qrCodeUrl = await qrcode.toDataURL(secret.otpauth_url);
       res.setHeader('Content-Type', 'application/json');

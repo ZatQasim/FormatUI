@@ -12,7 +12,7 @@ export function metaImagesPlugin(): Plugin {
     transformIndexHtml(html) {
       const baseUrl = getDeploymentUrl();
       if (!baseUrl) {
-        log('[meta-images] no FormatUI domain found, skipping meta tag updates');
+        log('[meta-images] no FormAT domain found, skipping meta tag updates');
         return html;
       }
 

@@ -86,12 +86,12 @@ export default function Home() {
             <div className="w-24 h-24 mx-auto mb-6 rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 animate-float bg-white/5 backdrop-blur-sm p-2 flex items-center justify-center">
               <img 
                 src="/logo.png" 
-                alt="FormatUI Logo" 
+                alt="FormAT Logo" 
                 className="w-full h-full object-contain"
               />
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-white/50">
-              Format your thoughts.
+              FormAT your thoughts.
             </h1>
             <p className="text-muted-foreground text-lg">
               The minimalist AI search and productivity hub.
@@ -168,7 +168,7 @@ export default function Home() {
                    <Bot size={100} />
                  </div>
                  <h3 className="text-lg font-heading font-semibold mb-3 flex items-center gap-2 text-primary">
-                   <Sparkles size={18} /> FormatUI AI Summary
+                   <Sparkles size={18} /> FormAT AI Summary
                  </h3>
                  <p className="text-muted-foreground leading-relaxed whitespace-pre-wrap">
                    {summary || `I've analyzed the real-time web results for "${query}". Here is the distilled information from current sources.`}

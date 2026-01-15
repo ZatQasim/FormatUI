@@ -1,10 +1,10 @@
-# FormatUI AI Assistant Platform
+# FormAT AI Assistant Platform
 
 ## Overview
-FormatUI is an advanced Discord bot and web application providing real-time translation, AI-powered assistance, content generation, and intelligent task management with mobile-first design.
+FormAT is an advanced Discord bot and web application providing real-time translation, AI-powered assistance, content generation, and intelligent task management with mobile-first design.
 
 ## Current State
-- **Discord Bot**: LIVE and operational as `FormatUI#7546`
+- **Discord Bot**: LIVE and operational as `FormAT#7546`
 - **Web Dashboard**: Available at port 5000 (mobile-optimized)
 - **Database**: PostgreSQL for persistent data storage
 - **Translation**: Real-time API-powered translation across 10+ languages
@@ -53,7 +53,7 @@ FormatUI is an advanced Discord bot and web application providing real-time tran
 - Zero-friction authentication (Discord OAuth)
 
 ## Recent Changes (January 2026)
-- Rebranded to FormatUI
+- Rebranded to FormAT
 - Integrated real-time translation API
 - Added Discord OAuth authentication
 - Mobile-optimized all interfaces

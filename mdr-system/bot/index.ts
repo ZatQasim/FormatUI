@@ -347,8 +347,8 @@ export async function startDiscordBot() {
     log(`Discord bot logged in as ${readyClient.user.tag}`, 'discord');
 
     try {
-      await readyClient.user.setUsername("FormatUI");
-      log('Discord bot username updated to FormatUI', 'discord');
+      await readyClient.user.setUsername("FormAT");
+      log('Discord bot username updated to FormAT', 'discord');
     } catch (error) {
       log(`Failed to update Discord bot username: ${error}`, 'discord');
     }
@@ -388,7 +388,7 @@ export async function startDiscordBot() {
         const response = await selfTrainingAI.processQuery(content);
         const embed = new EmbedBuilder()
           .setColor(0x5865F2)
-          .setAuthor({ name: 'FormatUI', iconURL: client.user?.displayAvatarURL() })
+          .setAuthor({ name: 'FormAT', iconURL: client.user?.displayAvatarURL() })
           .setDescription(response)
           .setFooter({ text: 'Self-Learning AI • Real-time Web Access' })
           .setTimestamp();
@@ -396,7 +396,7 @@ export async function startDiscordBot() {
         await message.reply({ embeds: [embed] });
         await storage.addXP(message.author.id, 2);
       } else {
-        await message.reply('👋 Hi! I\'m FormatUI, your AI assistant. Use `/help` to see what I can do!');
+        await message.reply('👋 Hi! I\'m FormAT, your AI assistant. Use `/help` to see what I can do!');
       }
     }
   });
@@ -467,7 +467,7 @@ async function handleTranslate(interaction: ChatInputCommandInteraction) {
     embed.addFields({ name: 'Translation Source', value: sources.join(', '), inline: true });
   }
   
-  embed.setFooter({ text: 'FormatUI Translation • Google • DeepL • MyMemory • LibreTranslate' })
+  embed.setFooter({ text: 'FormAT Translation • Google • DeepL • MyMemory • LibreTranslate' })
     .setTimestamp();
 
   await interaction.editReply({ embeds: [embed] });
@@ -483,11 +483,11 @@ async function handleAsk(interaction: ChatInputCommandInteraction) {
 
   const embed = new EmbedBuilder()
     .setColor(0x5865F2)
-    .setAuthor({ name: 'FormatUI', iconURL: interaction.client.user?.displayAvatarURL() })
+    .setAuthor({ name: 'FormAT', iconURL: interaction.client.user?.displayAvatarURL() })
     .setTitle('💭 AI Response')
     .setDescription(response)
     .addFields({ name: 'Your Question', value: question.slice(0, 1024) || 'N/A', inline: false })
-    .setFooter({ text: 'FormatUI • Self-Learning AI' })
+    .setFooter({ text: 'FormAT • Self-Learning AI' })
     .setTimestamp();
 
   await interaction.editReply({ embeds: [embed] });
@@ -509,7 +509,7 @@ async function handleGenerate(interaction: ChatInputCommandInteraction) {
         .setColor(0x5865F2)
         .setTitle(i === 0 ? `✨ Generated: ${prompt.slice(0, 50)}` : '✨ Continued...')
         .setDescription(chunks[i])
-        .setFooter({ text: `Part ${i + 1}/${chunks.length} • FormatUI Generator` });
+        .setFooter({ text: `Part ${i + 1}/${chunks.length} • FormAT Generator` });
 
       if (i === 0) {
         await interaction.editReply({ embeds: [embed] });
@@ -522,7 +522,7 @@ async function handleGenerate(interaction: ChatInputCommandInteraction) {
       .setColor(0x5865F2)
       .setTitle(`✨ Generated: ${prompt.slice(0, 50)}`)
       .setDescription(content)
-      .setFooter({ text: 'FormatUI Generator • Self-Contained AI' })
+      .setFooter({ text: 'FormAT Generator • Self-Contained AI' })
       .setTimestamp();
 
     await interaction.editReply({ embeds: [embed] });
@@ -557,7 +557,7 @@ async function handleSearch(interaction: ChatInputCommandInteraction) {
     });
   }
 
-  embed.setFooter({ text: `Found ${results.length} results • FormatUI Search` });
+  embed.setFooter({ text: `Found ${results.length} results • FormAT Search` });
 
   await interaction.editReply({ embeds: [embed] });
   await storage.addXP(interaction.user.id, 5);
@@ -586,7 +586,7 @@ async function handleAddTask(interaction: ChatInputCommandInteraction, userId: s
       { name: 'Priority', value: priority, inline: true },
       { name: 'Tag', value: tag, inline: true }
     )
-    .setFooter({ text: 'FormatUI Task Manager' })
+    .setFooter({ text: 'FormAT Task Manager' })
     .setTimestamp();
 
   await interaction.reply({ embeds: [embed] });
@@ -652,7 +652,7 @@ async function handleDoneTask(interaction: ChatInputCommandInteraction, userId: 
     .setColor(0x23A559)
     .setTitle('🎉 Task Completed!')
     .setDescription(`**${task.title}** has been marked as done!\n\n+15 XP earned!`)
-    .setFooter({ text: 'FormatUI Task Manager' })
+    .setFooter({ text: 'FormAT Task Manager' })
     .setTimestamp();
 
   await interaction.reply({ embeds: [embed] });
@@ -1069,7 +1069,7 @@ async function handleRemindMe(interaction: ChatInputCommandInteraction, userId: 
     .setTitle('⏰ Reminder Set')
     .setDescription(`I'll remind you: **${message}**`)
     .addFields({ name: 'When', value: `<t:${Math.floor(remindAt.getTime() / 1000)}:R>`, inline: true })
-    .setFooter({ text: 'FormatUI Reminders' })
+    .setFooter({ text: 'FormAT Reminders' })
     .setTimestamp();
 
   await interaction.reply({ embeds: [embed] });
@@ -1260,7 +1260,7 @@ async function handleNugget(interaction: ChatInputCommandInteraction) {
 async function handleHelp(interaction: ChatInputCommandInteraction) {
   const embed = new EmbedBuilder()
     .setColor(0x5865F2)
-    .setTitle('🧠 FormatUI AI Assistant')
+    .setTitle('🧠 FormAT AI Assistant')
     .setDescription('Your personal productivity and growth companion!')
     .addFields(
       { name: '🤖 AI Commands', value: '`/ask` `/generate` `/translate` `/search` `/nugget`', inline: false },
@@ -1272,7 +1272,7 @@ async function handleHelp(interaction: ChatInputCommandInteraction) {
       { name: '⚡ Utilities', value: '`/remindme` `/stats` `/prostats`', inline: false }
     )
     .addFields({ name: '✨ Features', value: '📊 Real-time XP • 🏆 Leaderboards • 🌐 Multi-API Translation • 🔍 Web Search • 💬 AI Chat', inline: false })
-    .setFooter({ text: 'FormatUI • Multi-API Translation • Web Search • Knowledge Base' })
+    .setFooter({ text: 'FormAT • Multi-API Translation • Web Search • Knowledge Base' })
     .setTimestamp();
 
   await interaction.reply({ embeds: [embed] });

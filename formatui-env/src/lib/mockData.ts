@@ -25,9 +25,9 @@ export interface Message {
 export const mockSearchResults: SearchResult[] = [
   {
     id: '1',
-    title: 'FormatUI Documentation',
+    title: 'FormAT Documentation',
     url: 'https://docs.formatui.ai/intro',
-    description: 'The official documentation for FormatUI AI OS. Learn how to leverage the power of our search engine and generator.',
+    description: 'The official documentation for FormAT AI OS. Learn how to leverage the power of our search engine and generator.',
     category: 'web'
   },
   {
@@ -65,7 +65,7 @@ export const mockChatHistory: Message[] = [
   {
     id: '1',
     role: 'assistant',
-    content: 'Hello! I am FormatUI. How can I assist you today? I can search the web, generate content, or manage your tasks.',
+    content: 'Hello! I am FormAT. How can I assist you today? I can search the web, generate content, or manage your tasks.',
     timestamp: new Date()
   }
 ];

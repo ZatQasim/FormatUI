@@ -477,8 +477,8 @@ export class DatabaseStorage implements IStorage {
       const count = await db.select({ count: sql<number>`count(*)` }).from(aiKnowledge);
       if (Number(count[0].count) === 0) {
         await db.insert(aiKnowledge).values([
-          { category: "general", pattern: "hello", response: "Hello! I am FormatUI. How can I assist you today?", weight: 1 },
-          { category: "general", pattern: "who are you", response: "I am FormatUI, your intelligent productivity assistant.", weight: 1 }
+          { category: "general", pattern: "hello", response: "Hello! I am FormAT. How can I assist you today?", weight: 1 },
+          { category: "general", pattern: "who are you", response: "I am FormAT, your intelligent productivity assistant.", weight: 1 }
         ]);
       }
     } catch (e) {

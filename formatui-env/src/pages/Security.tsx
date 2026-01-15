@@ -44,7 +44,7 @@ const SecurityPage = () => {
     const file = event.target.files?.[0];
     if (!file) return;
 
-    const hasPermission = window.confirm(`FormatUI needs permission to access "${file.name}" to generate a digital fingerprint. We will not read or store the actual content of the file. Do you allow this?`);
+    const hasPermission = window.confirm(`FormAT needs permission to access "${file.name}" to generate a digital fingerprint. We will not read or store the actual content of the file. Do you allow this?`);
     
     if (!hasPermission) return;
 

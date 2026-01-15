@@ -85,7 +85,7 @@ export default function AI() {
     <div className="h-[calc(100vh-4rem)] flex flex-col max-w-5xl mx-auto">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-3xl font-heading font-bold gradient-text">FormatUI Chat</h1>
+          <h1 className="text-3xl font-heading font-bold gradient-text">FormAT Chat</h1>
           <p className="text-muted-foreground">Advanced conversational intelligence</p>
         </div>
         <div className="flex items-center gap-4">
@@ -193,7 +193,7 @@ export default function AI() {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Message FormatUI..."
+                placeholder="Message FormAT..."
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary/50 transition-all placeholder:text-muted-foreground/50"
               />
             </div>
@@ -206,7 +206,7 @@ export default function AI() {
             </button>
           </form>
           <div className="text-center mt-2">
-            <p className="text-[10px] text-muted-foreground/40 font-mono">FormatUI Endpoint </p>
+            <p className="text-[10px] text-muted-foreground/40 font-mono">FormAT Endpoint </p>
           </div>
         </div>
       </div>

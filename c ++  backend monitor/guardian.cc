@@ -13,7 +13,7 @@ napi_value KeepAlivePulse(napi_env env, napi_callback_info info) {
     return result;
 }
 
-// Memory Health Check: Reports back to FormatUI if the system is getting 'heavy'
+// Memory Health Check: Reports back to FormAT if the system is getting 'heavy'
 napi_value GetSystemVitals(napi_env env, napi_callback_info info) {
     // In a full implementation, you'd use <sys/resource.h> here
     // For now, we return a 'Healthy' signal to the TypeScript side.

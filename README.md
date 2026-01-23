@@ -1,4 +1,4 @@
-FormAT
+## FormAT
 
 FormAT is a powerful all-in-one application combining:
 
@@ -15,10 +15,12 @@ Experiments Platform – run and test experimental features
 
 FormAT is designed to keep systems running smoothly while providing advanced tools for productivity and experimentation.
 
+### Developed by ZatQasim (Mohamed Mohamed Diriye)
+
 
 ---
 
-Features
+## Features
 
 Interactive AI assistant for guidance and automation
 
@@ -36,7 +38,7 @@ Lightweight, modular, and efficient
 
 ---
 
-Installation
+## Installation
 
 1. Clone the repository:
 
@@ -63,7 +65,7 @@ node main.js
 
 ---
 
-Usage
+## Usage
 
 Launch the app using node main.js
 
@@ -79,7 +81,7 @@ Explore experimental features under the experiments menu
 
 ---
 
-Contributing
+## Contributing
 
 We welcome contributions!
 
